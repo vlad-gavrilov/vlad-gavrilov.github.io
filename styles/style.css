@@ -53,15 +53,57 @@ header {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+.intro {
+  flex: 1;
+  min-width: 0;
+}
+
 .intro h1 {
-  margin: 0 0 5px 0;
+  margin: 0;
   font-size: 2rem;
 }
 
 .intro p {
-  margin: 0;
+  margin: 6px 0 0 0;
   font-size: 1rem;
   color: #555;
+}
+
+.header-social-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.header-social-links a {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(0, 123, 255, 0.1);
+  border: 1px solid rgba(0, 123, 255, 0.25);
+  color: #007bff;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.header-social-links a:hover {
+  text-decoration: none;
+  background: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.header-social-links a:focus-visible {
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+}
+
+.header-social-links i {
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .section-title {
@@ -100,6 +142,14 @@ header {
     flex-direction: column;
     text-align: center;
     gap: 15px;
+  }
+
+  .intro {
+    width: 100%;
+  }
+
+  .header-social-links {
+    justify-content: center;
   }
 
   .avatar {
